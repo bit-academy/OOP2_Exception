@@ -1,61 +1,51 @@
-public class Inheritance
-{
-    String className;
+public class Inheritance {
+	String className;
 
-    public Inheritance()
-    {
-        System.out.println("[Inheritance ÀÇ »ı¼ºÀÚ]");
-    }
+	public Inheritance() {
+		System.out.println("[Inheritance ì˜ ìƒì„±ì]");
+	}
 
-    void printClassName()
-    {
-        setClassName("Inheritance");
-        System.out.println(className);
-    }
+	void printClassName() {
+		setClassName("Inheritance");
+		System.out.println(className);
+	}
 
-    void printMyClassName()
-    {
-        printClassName();
-    }
+	void printMyClassName() {
+		printClassName();
+	}
 
-    void setClassName(String className)
-    {
-        this.className = className;
-    }
+	void setClassName(String className) {
+		this.className = className;
+	}
 
-    public static void main(String[] args)
-    {
-        Inheritance inheritance = new Inheritance();
-        inheritance.printClassName();
+	public static void main(String[] args) {
+		Inheritance inheritance = new Inheritance();
+		inheritance.printClassName();
 
-        System.out.println("");
+		System.out.println("");
 
-        Inheritance inherited = new InheritedClass();
-        inherited.printClassName();
+		Inheritance inherited = new InheritedClass();
+		inherited.printClassName();
 
-    // ¾Æ·¡ ¹®ÀåÀº ½ÇÇàµÉ ¼ö ¾ø´Ù.
-    //        inherited.printClassName("new method!");
-        InheritedClass inherited2 = (InheritedClass)inherited;
-        inherited2.printClassName("new method!");
-    }
-    }
+		// ì•„ë˜ ë¬¸ì¥ì€ ì‹¤í–‰ë  ìˆ˜ ì—†ë‹¤.
+		// inherited.printClassName("new method!");
+		InheritedClass inherited2 = (InheritedClass) inherited;
+		inherited2.printClassName("new method!");
+	}
+}
 
-    class InheritedClass extends Inheritance
-    {
-    public InheritedClass()
-    {
-        System.out.println("[InheritedClass ÀÇ »ı¼ºÀÚ]");
-    }
+class InheritedClass extends Inheritance {
+	public InheritedClass() {
+		System.out.println("[InheritedClass ì˜ ìƒì„±ì]");
+	}
 
-    public void printClassName()
-    {
-        setClassName("InheritedClass");
-        System.out.println(className);
-    }
+	public void printClassName() {
+		setClassName("InheritedClass");
+		System.out.println(className);
+	}
 
-    public void printClassName(String header)
-    {
-        // Inheritance µ¥ÀÌÅÍÇü º¯¼ö·Î Instance¸¦ ´Ù·ç°í ÀÖÀ» ¶§´Â
-        // printClassName(String header) ¸Ş¼Òµå¿¡ ´ëÇÑ Á¤º¸°¡ º¯¼ö¿¡ ¾øÀ¸¹Ç·Î, È£ÃâÇÒ ¼ö ¾ø´Ù.
-    }
+	public void printClassName(String header) {
+		// Inheritance ë°ì´í„°í˜• ë³€ìˆ˜ë¡œ Instanceë¥¼ ë‹¤ë£¨ê³  ìˆì„ ë•ŒëŠ”
+		// printClassName(String header) ë©”ì†Œë“œì— ëŒ€í•œ ì •ë³´ê°€ ë³€ìˆ˜ì— ì—†ìœ¼ë¯€ë¡œ, í˜¸ì¶œí•  ìˆ˜ ì—†ë‹¤.
+	}
 }
