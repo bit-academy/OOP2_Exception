@@ -1,7 +1,9 @@
 class Shape2 {
+    int i;
 }
 
 class Circle2 extends Shape2 {
+    int j;
 }
 
 public class DowncastingTest {
