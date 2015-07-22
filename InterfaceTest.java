@@ -1,25 +1,19 @@
-public class InterfaceTest
-{
-    public static void main(String[] args)
-    {
-        InterfaceCaller ic = new InterfaceCaller();
-        MyInterface impl = new InterfaceImpl();
-        ic.receiveObject(impl);
-    }
+public class InterfaceTest extends Object {
+	public static void main(String[] args) {
+		InterfaceCaller ic = new InterfaceCaller();
+		MyInterface impl = new InterfaceImpl();
+		ic.receiveObject(impl);
+	}
 }
 
-class InterfaceImpl implements MyInterface
-{
-    public void interfaceMethod()
-    {
-        System.out.println(MyInterface.NAME + " ÀÎÅÍÆäÀÌ½ºÀÇ ¸Ş¼Òµå¸¦ ±¸ÇöÇÑ °ÍÀÔ´Ï´Ù.");
-    }
+class InterfaceImpl implements MyInterface {
+	public void interfaceMethod() {
+		System.out.println(MyInterface.NAME + " ì¸í„°í˜ì´ìŠ¤ì˜ ë©”ì†Œë“œë¥¼ êµ¬í˜„í•œ ê²ƒì…ë‹ˆë‹¤.");
+	}
 }
 
-class InterfaceCaller
-{
-    public void receiveObject(MyInterface mi)
-    {
-        mi.interfaceMethod();
-    }
+class InterfaceCaller {
+	public void receiveObject(MyInterface mi) {
+		mi.interfaceMethod();
+	}
 }
