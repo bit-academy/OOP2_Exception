@@ -1,20 +1,14 @@
-public class Exception1
-{
-    public static void main(String[] args)
-    {
-        try
-        {
-            int i = 1/0;
-        } catch(ArithmeticException ae)
-        {
-            System.out.println("¼ö¿¬»ê¿¹¿Ü : " + ae);
-            ae.printStackTrace();
-        } catch(Exception e)
-        {
-            System.out.println("±âÅ¸ ¿¹¿Ü : " + e);
-        } finally
-        {
-            System.out.println("try ±¸¹®À» ¹ş¾î³ª±â Àü¿¡ ½ÇÇàµÊ.");
-        }
-    }
+public class Exception1 {
+	public static void main(String[] args) {
+		try {
+			int i = 1 / 0;
+		} catch (ArithmeticException ae) {
+			System.out.println("ìˆ˜ì—°ì‚°ì˜ˆì™¸ : " + ae);
+			ae.printStackTrace();
+		} catch (Exception e) {
+			System.out.println("ê¸°íƒ€ ì˜ˆì™¸ : " + e);
+		} finally {
+			System.out.println("try êµ¬ë¬¸ì„ ë²—ì–´ë‚˜ê¸° ì „ì— ì‹¤í–‰ë¨.");
+		}
+	}
 }
