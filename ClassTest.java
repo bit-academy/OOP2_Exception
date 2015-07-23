@@ -14,10 +14,9 @@ public class ClassTest {
 	}
 
 	public static void main(String[] args) throws ClassNotFoundException {
-		ClassTest classTest = new ClassTest();
-
 		try {
 			Class<?> clazz_ClassTest = Class.forName("ClassTest");
+			ClassTest classTest = (ClassTest) clazz_ClassTest.newInstance();
 
 			Field field_myInt = clazz_ClassTest.getField("myInt");
 			int fieldValue = field_myInt.getInt(classTest);
@@ -30,9 +29,11 @@ public class ClassTest {
 					"staticPrint", String.class);
 			method_staticPrint.invoke(null,
 					"staticPrint() 호출할 때에는 instance 가 필요없음.");
+
 		} catch (NoSuchMethodException | SecurityException
 				| IllegalAccessException | IllegalArgumentException
-				| InvocationTargetException | NoSuchFieldException e) {
+				| InvocationTargetException | NoSuchFieldException
+				| InstantiationException e) {
 			e.printStackTrace();
 		}
 
