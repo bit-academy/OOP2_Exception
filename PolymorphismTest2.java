@@ -1,8 +1,8 @@
-interface CityGasPipeLine {
+interface CityGasGuage {
 	int getMonthlyGasAmountUsed();
 }
 
-abstract class Building implements CityGasPipeLine {
+abstract class Building implements CityGasGuage {
 	private int floorCount;
 	private int monthlyGasAmountUsed;
 
@@ -86,8 +86,14 @@ public class PolymorphismTest2 {
 		stores.setMonthlyGasAmountUsed(150);
 		apart.setMonthlyGasAmountUsed(250);
 
-		System.out.println("\n빌라 가스사용량: " + villa.getMonthlyGasAmountUsed());
-		System.out.println("상가 가스사용량: " + stores.getMonthlyGasAmountUsed());
-		System.out.println("아파트 가스사용량: " + apart.getMonthlyGasAmountUsed());
+		System.out.println(":::::");
+
+		printGasAmount(villa, "빌라 가스사용량: ");
+		printGasAmount(stores, "상가 가스사용량: ");
+		printGasAmount(apart, "아파트 가스사용량: ");
+	}
+
+	private static void printGasAmount(CityGasGuage gasGuage, String title) {
+		System.out.println(title + gasGuage.getMonthlyGasAmountUsed());
 	}
 }
