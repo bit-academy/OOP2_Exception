@@ -8,7 +8,7 @@ public class Exception3 {
 		throw new Exception();
 	}
 
-	public void method3() throws Exception {
+	public void method3() throws MyException {
 		throw new MyException();
 	}
 
@@ -18,7 +18,7 @@ public class Exception3 {
 }
 
 class Exception3_1 extends Exception3 {
-	public void method3() {
+	public void method2() {
 	}
 }
 
